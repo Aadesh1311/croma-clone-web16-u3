@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
-    
-</body>
+    <!-- Navbar Related code Starts -->
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- Navbar Related code ends -->
+  </head>
+  <body>
+    <!-- Navbar Starts-->
+    <div id="navbar"></div>
+    <!-- Navbar Ends -->
+  </body>
 </html>
+
+<!-- Navbar Related code Starts -->
+<script type="module">
+  //
+  import navbarImp from "./components/navbar.js";
+  console.log("navbarImp:", navbarImp());
+
+  let navID = document.getElementById("navbar");
+  navID.innerHTML = navbarImp();
+  //
+</script>
+
+<script
+  src="https://kit.fontawesome.com/ad11ed91f0.js"
+  crossorigin="anonymous"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<!-- Navbar Related code ends -->
