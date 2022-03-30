@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .container {
+        width: 100%;
+        overflow: hidden;
+      }
+      .container #myCarousel .carousel-inner {
+        overflow: hidden;
+      }
+      #myCarousel {
+        display: flex;
+        justify-content: space-around;
+        background-color: #353535;
+        height: 80px;
+      }
+      .carousel-inner {
+        display: flex;
+        overflow: hidden;
+      }
+      .item {
+        border: 1px solid cyan;
+        justify-content: space-around;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+      .item a {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-interval="500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <!-- . -->
+          <div class="item active">
+            <a href="">
+              <img
+                src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891062/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Mobile_Phones_adlg8p.svg/mxw_64,f_auto"
+              />
+              <p>Mobiles</p>
+            </a>
+          </div>
+
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/televisions.png" />
+              <p>Televisions</p>
+            </a>
+          </div>
+
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/laptop.png" />
+              <p>Laptops</p>
+            </a>
+          </div>
+
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/headphones.png" />
+              <p>Audio</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img
+                src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891060/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Air_Conditioners_ove6gw.svg/mxw_64,f_auto"
+              />
+              <p>Air Conditioners</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/refrigerators.png" />
+              <p>Refrigerators</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/washing.png" />
+              <p>Washing Machines</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/kitchen-app.png" />
+              <p>Kitchen Appliances</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/grooming.png" />
+              <p>Grooming</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/Tablets.png" />
+              <p>Tablets</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/Wearables.png" />
+              <p>Wearables</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/camera.png" />
+              <p>Cameras</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/Accessories.png" />
+              <p>Accessories</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img src="./images/navbar-bottom/Gaming.png" />
+              <p>Gaming</p>
+            </a>
+          </div>
+          <!-- . -->
+          <div class="item">
+            <a href="">
+              <img
+                src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891060/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Consumables_cy6rgt.svg/mxw_64,f_auto"
+              />
+              <p>Consumables</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button">
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button">
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    // Activate Carousel
+    $("#myCarousel").carousel("pause");
+
+    // Click on the button to start sliding
+    $("#myBtn").click(function () {
+      $("#myCarousel").carousel("cycle");
+    });
+
+    // Click on the button to stop sliding
+    $("#myBtn2").click(function () {
+      $("#myCarousel").carousel("pause");
+    });
+
+    // Enable Carousel Indicators
+    $(".item1").click(function () {
+      $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function () {
+      $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function () {
+      $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function () {
+      $("#myCarousel").carousel(3);
+    });
+
+    // Enable Carousel Controls
+    $(".left").click(function () {
+      $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function () {
+      $("#myCarousel").carousel("next");
+    });
+  });
+</script>
