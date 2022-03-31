@@ -7,16 +7,18 @@
    
 }
 
-body{
+ body{
+   
+    background:#121212;
+   
+}
+
+.slider{
     display: flex;
     justify-content: center;
     align-items: center;
     background:#121212;
     display: block;
-    
-}
-
-.slider{
     position: relative;
     width:100%;
     overflow:hidden;
@@ -83,6 +85,11 @@ body{
 
     }
 .carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#121212;
+    display: block;
     width:80%;
     margin-right: 10%;
     margin-left: 10%;
@@ -278,6 +285,12 @@ font-size:15px;
 
 }
 .hda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#121212;
+    display: block;
+
   width:80%;
   color:white;
   margin-left: 10%;
@@ -294,6 +307,12 @@ body{
   font-family: sans-serif;
 }
 #mini_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#121212;
+    display: block;
+
   display: flex;
   width: 80%;
   margin-left:10%;
