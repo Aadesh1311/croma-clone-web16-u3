@@ -29,9 +29,62 @@
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
               <h3>Shop by Category</h3>
-              <a href="">Televisions & Accessories</a>
+              <a href="#">Televisions & Accessories</a>
               <a href="#">Home Appliances</a>
               <a href="#">Phone and Wearables</a>
+              <a href="#">Computer and Tables</a>
+              <a href="#">Kitchen Appliances</a>
+              <a href="#">Audio & Video</a>
+              <a href="#">Health and Fitness</a>
+              <a href="#">Grooming & Personal Care</a>
+              <a href="#">Camera & Accessories</a>
+              <a href="#">Smart Devices</a>
+              <a href="#">Gaming</a>
+              <a href="#">Accessories</a>
+              <a href="#">Top Brands</a>
+            </div>
+
+            <div class="more-dropdown-content-tele">
+              <div id="more-dropdown-content-tele-left">
+                <a href="#">Air Conditioners</a>
+                <a href="#">Inverter ACs</a>
+                <a href="#">Portable ACs</a>
+                <a href="#">Split ACs</a>
+                <a href="#">Window ACs</a>
+                <a href="#">Smart ACs</a>
+                <a href="#">Tower ACs</a>
+                <a href="#">Hot & Cold ACs</a>
+                <a href="#">3 Star ACs</a>
+                <a href="#">5 Star ACs</a>
+                <a href="#">Croma Air Conditioners</a>
+                <a href="#">Air Conditioners Accessories</a>
+                <a href="#">Refrigerators & Freezers</a>
+                <a href="#">Single Door Refrigerators</a>
+                <a href="#">Double Door Refrigerators</a>
+                <a href="#">Triple Door Refrigerators</a>
+                <a href="#">Side By Side Refrigerators</a>
+              </div>
+
+              <div id="more-dropdown-content-tele-center">
+                <a href="#">Air Purifiers</a>
+                <a href="#">Air Dehumidifiers</a>
+                <a href="#">Air Humidifiers</a>
+                <a href="#">Smart Air Purifiers</a>
+                <a href="#">Air Quality Monitors</a>
+                <a href="#">Car Air Purifiers</a>
+                <a href="#">Air Filters & Accessories</a>
+                <a href="#">Air Coolers</a>
+                <a href="#">Desert Air Coolers</a>
+                <a href="#">Tower Air Coolers</a>
+                <a href="#">Portable Air Coolers</a>
+                <a href="#">Smart Air Coolers</a>
+                <a href="#">Fans</a>
+                <a href="#">Exhaust Fans</a>
+                <a href="#">Pedestal Fans</a>
+                <a href="#">Tower Fans</a>
+                <a href="#">Wall Mount Fans</a>
+                <a href="#">Ceiling Fans</a>
+              </div>
             </div>
           </div>
         </div>
@@ -243,12 +296,34 @@
   //
 </script> -->
 
-<script
-  src="https://kit.fontawesome.com/ad11ed91f0.js"
-  crossorigin="anonymous"
-></script>
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-</style>
+<script type="module">
+  // import navbarImp from "./components/navbar.js";
+  // //console.log("navbarImp:", navbarImp());
+  // let navID = document.getElementById("navbar");
+  // navID.innerHTML = navbarImp();
+
+  document
+    .getElementById("nav-top-search")
+    .addEventListener("keypress", (elem) => {
+      if (elem.code == "Enter") {
+        //console.log(elem);
+        let inputVal = document.getElementById("nav-top-search").value;
+        console.log("inputVal:", inputVal);
+
+        if (
+          inputVal == "mobile" ||
+          inputVal == "MOBILE" ||
+          inputVal == "Mobile" ||
+          inputVal == "mobiles" ||
+          inputVal == "MOBILES" ||
+          inputVal == "Mobiles"
+        ) {
+          console.log("passed if condition:", inputVal);
+        }
+        //window.location = "";
+      }
+    });
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

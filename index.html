@@ -25,17 +25,37 @@
 <script type="module">
   //
   import navbarImp from "./components/navbar.js";
-  console.log("navbarImp:", navbarImp());
+  //console.log("navbarImp:", navbarImp());
 
   let navID = document.getElementById("navbar");
   navID.innerHTML = navbarImp();
+
+  document
+    .getElementById("nav-top-search")
+    .addEventListener("keypress", (elem) => {
+      if (elem.code == "Enter") {
+        //console.log(elem);
+
+        let inputVal = document.getElementById("nav-top-search").value;
+        console.log("inputVal:", inputVal);
+
+        if (
+          inputVal == "mobile" ||
+          inputVal == "MOBILE" ||
+          inputVal == "Mobile" ||
+          inputVal == "mobiles" ||
+          inputVal == "MOBILES" ||
+          inputVal == "Mobiles"
+        ) {
+          console.log("passed if condition:", inputVal);
+        }
+
+        //window.location = "";
+      }
+    });
+
   //
 </script>
-
-<script
-  src="https://kit.fontawesome.com/ad11ed91f0.js"
-  crossorigin="anonymous"
-></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
