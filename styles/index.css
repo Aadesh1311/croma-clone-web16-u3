@@ -340,4 +340,9 @@ margin-top: 35px;
 }
 
 
+
+.carousel .flickity-prev-next-button{
+  background-color: transparent;
+}
+
 /* css of shope data ending*/
