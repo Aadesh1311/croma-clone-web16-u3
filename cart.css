@@ -7,10 +7,14 @@
     cursor: pointer;   
     margin: 11px 4px
 }
-*{
+/* *{
     background-color:#141313;
     color:white;
     font-family: sans-serif;
+  } */
+  body{
+    background-color: black;
+    color:white
   }
   #container {
     display: inline;
@@ -42,7 +46,7 @@
     margin: 0px 0px 50px -38px;
     height: 260px;
   }
-  div>img {
+  #dimg{
     
     width: 260px;
     margin:0px 66px 45px 169px
@@ -86,13 +90,7 @@ h3 {
     
   
   }
-  #total{
-     
-       
-    box-sizing: border-box;
-    margin-left: 27px;
-  
-  }
+ 
 
   #dat{
     margin-top:5px;
@@ -206,7 +204,8 @@ h3 {
  grid-template-columns: repeat(1,1fr);
 }
 #dat{
-  padding: 0px 0px 6px 27px;
+  padding: 2px 4px 6px 58px;
+  border-radius: 8px;
   border: 1px solid white;
   display: inline;
   width: 400px;
@@ -215,12 +214,13 @@ h3 {
   border: solid 1px #353535;
 }
 #Btitle{
-  font-size: 2.2rem;
-  margin: 44px 117px 19px 18px;
+  font-size: 1.8rem;
+  margin: 10px 61px 21px 28px;
+
 }
 #checkO> button{
   cursor: pointer;   
-  margin: 19px 0px -1px -59px;
+  margin: 6px 0px -1px -25px;
   font-size: 1.2rem;
   line-height: normal;
   font-weight: 700;
@@ -241,11 +241,15 @@ h3 {
 }
 #total{
   display: inline;
+  font-size: 25px;
+  color: aqua;
+  display: inline;
   margin: auto;
 }
 #delivery-cost{
-    font-size: 19px;
-  margin: 16px 51px 10px 1px;
+  font-size: 19px;
+  margin: 14px 21px 26px -47px;
+
  
 }
 #free{

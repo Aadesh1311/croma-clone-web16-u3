@@ -2,22 +2,23 @@
 // console.log(cart);
 var dataMobile = JSON.parse(localStorage.getItem("added"));
 console.log(dataMobile);
-displayData(dataMobile);
 function displayData(dataMobile) {
   document.querySelector("#container").innerHTML=null
   document.querySelector("#containerCont").innerHTML=null
 
   dataMobile.map(function (elem, index) {
     var div = document.createElement("div");
+    
     var section = document.createElement("section");
-
+    
     var avtar = document.createElement("img");
+    avtar.setAttribute("id", "dimg");
     avtar.setAttribute("src", elem.image);
 
     var name = document.createElement("h5");
     name.setAttribute("id","name")
     name.innerText = `${elem.title}, `
-
+    
     var price = document.createElement("h4");
     price.setAttribute("id","price")
     price.innerText = "₹"+  elem.price;
@@ -28,7 +29,7 @@ function displayData(dataMobile) {
 
     var btn2 = document.createElement("button");
     btn2.innerText = "-";
-   
+    
     var btn = document.createElement("button");
     btn.innerText = "+";
 
@@ -42,15 +43,11 @@ function displayData(dataMobile) {
     var remove= document.createElement("button")
     remove.setAttribute("class","removeItem")
     remove.innerHTML = "Remove";
-    remove.addEventListener("click", function (index) {
-        var cart = JSON.parse(localStorage.getItem("cartItem"))
-        cart.splice(index, 1);
-        localStorage.setItem("cartItem", JSON.stringify(cart))
-        alert("Your item will be removeeted...");
-        location.reload();
+    remove.addEventListener("click", function () {
+       add(index)
     })
 
-
+    
     section.append(name, price, btn, quant,btn2,remove);
     document.querySelector("#containerCont").append(section);
     
@@ -58,6 +55,21 @@ function displayData(dataMobile) {
     document.querySelector("#container").append(div);
   });
 }
+displayData(dataMobile);
+// remove cartItems start
+function add(index){
+  // container.innerHTML = null
+  document.querySelector("#container").innerHTML=null
+
+  dataMobile.splice(index,1)
+  showTotal()
+  displayData(dataMobile)
+  localStorage.setItem("cartArr",JSON.stringify(cart))
+  
+}
+// remove cartItems ends
+
+
 
 function showTotal() {
   var total = dataMobile.reduce(function (acc, elem) {

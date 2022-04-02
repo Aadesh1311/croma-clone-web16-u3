@@ -24,8 +24,6 @@ const appendProduct=(dataMobile)=>{
           myCart(elem)
         })
         
-        
-
     })
 }
 var arr=[]
