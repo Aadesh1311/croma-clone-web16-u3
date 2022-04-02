@@ -65,10 +65,9 @@ function showTotal() {
   }, 0);
   document.getElementById("total").textContent = "₹" + total;
   // document.getElementById("discount").textContent = `Total amount to pay ₹ ${total}`
-  
+  localStorage.setItem("total", JSON.stringify(total));
 }
 showTotal();
-// //coupan func//
 document.querySelector("#promo").addEventListener("click", formSubmit);
 function formSubmit() {
   var coupon = document.querySelector("#coupon").value;
@@ -114,7 +113,7 @@ function increaseQuant(index) {
   showTotal();
 }
 function redirect(){
-  showTotal();
-  localStorage.setItem("total",JSON.stringify(total));
+  // showTotal();
+  // localStorage.setItem("total",JSON.stringify(total));
   window.location.href = "checkout.html"
 }
