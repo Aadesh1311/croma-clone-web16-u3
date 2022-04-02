@@ -5,7 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
     <title></title>
     <style>
         #container{
@@ -175,10 +182,14 @@
               background-color:rgb(27, 27, 27) ;
               border: 1px solid white;
           }
+          body{
+            background-color: rgb(27, 27, 27);
+          }
          
     </style>
   </head>
   <body>
+    <div id="navbar"></div>
       <div id="container">
           <div id="crumb">
               <p class="p" style="margin-left:100px;"> My Account&nbsp;&nbsp;&nbsp;&#8250;&nbsp;&nbsp;&nbsp;My Addresses&nbsp;&nbsp;&nbsp;&#8250;&nbsp;&nbsp;&nbsp;Manage Address</p>
@@ -242,7 +253,7 @@
                     </div>
                     <div class="fifth">
                         <div class="btn">
-                            <button id="btn1">SAVE ADDRESS</button>
+                            <button id="btn1" onclick="window.location.href='index.html'">SAVE ADDRESS</button>
                         </div>
                     </div>
                         
@@ -251,6 +262,67 @@
           </div>
 
       </div>
+      <div id="footer"></div>
 
   </body>
   </html>
+  <!-- Navbar Related code Starts -->
+<script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!-- Navbar Related code ends -->
+
+  <script type="module">
+    //
+    import footerImp from "./components/footer.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let footerID = document.getElementById("footer");
+    footerID.innerHTML = footerImp();
+  
+    
+  </script>
+  <script>
+      function televisions(){
+    window.location.href="otp.html"
+}
+  </script>
+  
+  
+  
