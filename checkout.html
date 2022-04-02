@@ -21,7 +21,7 @@
       href="https://lh3.googleusercontent.com/Hh_QKiJDmg2LQdL2aJ3cw_hBnWyH6dEqaFsiOgLNAZ6XnpPVuvrBCSeNzKQA8GCk519H=s180"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/checkout.css" />
   </head>
   <body>
         <!-- The Modal -->
@@ -142,24 +142,8 @@
   </body>
   </html>
   <script>
-      // let testData = JSON.parse(localStorage.getItem("cart"))||[]
-      function openBox(el) {
-        let tempBox = document.querySelector(el);
-        let btn = document.querySelector(el + "Btn");
-        if (tempBox.classList.contains("off")) {
-          btn.classList.add("rotate");
-    tempBox.classList.remove("off");
-  } else {
-    tempBox.classList.add("off");
-    btn.classList.remove("rotate");
-  }
-}
-// cartChange();
-// function cartChange() {
-  // var totalCost = JSON.parse(localStorage.getItem("added"));
-  //   document.querySelector("#price").innerHTML = `₹${totalCost}`;
-  //   document.querySelector("#totalCost").innerHTML = `₹${totalCost}`;
-  // }
+      // let testData = JSON.parse(localStorage.getItem("added"))||[]
+
   // mapCart(testData);
   </script>
   <script src="/checkout.js"></script>

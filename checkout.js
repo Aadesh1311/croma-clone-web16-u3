@@ -32,3 +32,20 @@ var span = document.getElementsByClassName("close")[0];
       
     }
 }
+function openBox(el) {
+    let tempBox = document.querySelector(el);
+    let btn = document.querySelector(el + "Btn");
+    if (tempBox.classList.contains("off")) {
+      btn.classList.add("rotate");
+tempBox.classList.remove("off");
+} else {
+tempBox.classList.add("off");
+btn.classList.remove("rotate");
+}
+}
+cartChange();
+function cartChange() {
+var totalCost = JSON.parse(localStorage.getItem("total"));
+document.querySelector("#price").innerHTML = `₹${totalCost}`;
+document.querySelector("#totalCost").innerHTML = `₹${totalCost}`;
+}
