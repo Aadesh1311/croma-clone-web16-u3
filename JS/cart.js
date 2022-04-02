@@ -13,6 +13,7 @@ function displayData(dataMobile) {
 
     var avtar = document.createElement("img");
     avtar.setAttribute("src", elem.image);
+    avtar.setAttribute("id", "dimg");
 
     var name = document.createElement("h5");
     name.setAttribute("id","name")
