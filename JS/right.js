@@ -84,7 +84,7 @@ const appendData =(data) =>{
           title.innerText =  el.title;
           //title.style.fontSize = "30px"
           title.addEventListener("click",function(){
-            window.location.href = "productD.html"
+          myFun(el)
           })
 
           var time = document.createElement("p");
@@ -169,4 +169,7 @@ function sorted(){
         document.querySelector("#appendproducts").innerText = "";
         document.querySelector("#appendproducts").style.border ="none";
     }
+}
+function myFun(el){
+  window.location.href = "productD.html"
 }
