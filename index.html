@@ -30,6 +30,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
     <!-- Navbar Starts-->
@@ -891,6 +893,10 @@
       Group.
     </div>
     <!-- data ending -->
+
+    <!-- FOOTER CODE STARTS -->
+    <div id="footer"></div>
+    <!-- FOOTER CODE ENDS -->
   </body>
 </html>
 
@@ -935,3 +941,12 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <!-- Navbar Related code ends -->
+
+<script type="module">
+  //
+  import footerImp from "./components/footer.js";
+  //console.log("navbarImp:", navbarImp());
+
+  let footerID = document.getElementById("footer");
+  footerID.innerHTML = footerImp();
+</script>
