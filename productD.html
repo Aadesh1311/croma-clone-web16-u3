@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
+    <link rel="stylesheet" href="/styles/footer.css">
 
 </head>
 
@@ -167,7 +168,10 @@
         </div>
       </div>
     </div>
-    
+    </div>
+    </div>
+    </div>
+    <!-- <div id="footr"></div> -->
 
 </body>
 
@@ -182,6 +186,12 @@
     let navID = document.getElementById("navbar");
     navID.innerHTML = navbarImp();
   
+    
+    // import footer from "./components/footer.js";
+
+    // let footr = document.getElementById("footr")
+    // footr.innerHTML =footer();
+
     document
       .getElementById("nav-top-search")
       .addEventListener("keypress", (elem) => {
