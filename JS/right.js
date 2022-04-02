@@ -153,7 +153,7 @@ function sorted(){
     if(s.checked == true){
        // console.log("hi")
        appendData(sort)
-       document.querySelector("#appendproducts").innerText = "Portable & Bluetooth Speakers (296)"
+       document.querySelector("#appendproducts").innerText = "Portable & Bluetooth Speakers"
     }
     else{
         appendData(data)
