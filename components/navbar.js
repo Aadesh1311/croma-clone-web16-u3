@@ -92,13 +92,13 @@ function nav() {
         </div>
         <!-- . -->
         <div id="nav-login">
-          <a href="/login.html"
+          <a href="./login.html"
             ><img src="./images/outline_person_white_24dp.png" alt="profile"
           /></a>
         </div>
         <!-- . -->
         <div id="nav-cart">
-          <a href="/cart.html">
+          <a href="./cart.html">
             <img src="./images/outline_shopping_cart_white_24dp.png" />
           </a>
         </div>

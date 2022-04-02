@@ -28,7 +28,8 @@ const appendData =(data) =>{
       data.map(function(el){
           var div =  document.createElement("div");
           var hr = document.createElement("hr");
-          var hr2 = document.createElement("hr");
+          hr.style.borderColor="#1d1d1d"
+        //  var hr2 = document.createElement("hr");
 
           var sdiv =  document.createElement("div");
           var pdiv =  document.createElement("div");
@@ -52,17 +53,18 @@ const appendData =(data) =>{
          compare.append(input,label,p)
           var price = document.createElement("p");
           price.innerText="₹" +el.price;
-          price.style.marginTop="-2px";
-          price.style.fontSize="25px";
+        //   price.style.marginTop="-2px";
+        //   price.style.fontSize="25px";
 
           var cut_price = document.createElement("s");
           cut_price.innerText ="₹" + el.strikeoff;
-          cut_price.style.fontSize="18px"
+        //   cut_price.style.fontSize="18px"
 
           var cutoff = document.createElement("div");
           cutoff.innerText = offoprice(el.price,el.strikeoff);
           cutoff.style.border=" 1px solid #1d1d1d";
-          cutoff.style.height = "25px";
+         cutoff.style.fontSize = "12px";
+         cutoff.style.height = "17px"
 
           var heart = document.createElement("i");
           heart.setAttribute("class", "fa-regular fa-heart")
@@ -76,15 +78,16 @@ const appendData =(data) =>{
 
           var pid = document.createElement("p");
           pid.innerHTML = el.Product_Id;
-          pid.style.fontSize = "20px"
+        //   pid.style.fontSize = "20px"
 
           var title = document.createElement("p");
           title.innerText =  el.title;
-          title.style.fontSize = "30px"
+          //title.style.fontSize = "30px"
 
 
           var time = document.createElement("p");
-          time.innerText = el.delivery
+          time.innerText = el.delivery;
+          time.style.fontSize = "15px";
 
 
           var btn1 = document.createElement("button");
@@ -125,6 +128,7 @@ function buynow(el){
 
 var add=[];
 function addtocart(el){
+    el.quant =1 ;
     console.log(el);
     add.push(el)
     localStorage.setItem("added",JSON.stringify(add))
@@ -152,10 +156,15 @@ function sorted(){
     if(s.checked == true){
        // console.log("hi")
        appendData(sort)
-       document.querySelector("#appendproducts").innerText = "Portable & Bluetooth Speakers (296)"
+       document.querySelector("#appendproducts").innerText = "Portable & Bluetooth Speakers";
+       document.querySelector("#appendproducts").style.border ="1px solid #00e9bf";
+       document.querySelector("#appendproducts").style.color ="#00e9bf";
+       document.querySelector("#appendproducts").style.fontSize = "12px";
+
     }
     else{
         appendData(data)
-        document.querySelector("#appendproducts").innerText = ""
+        document.querySelector("#appendproducts").innerText = "";
+        document.querySelector("#appendproducts").style.border ="none";
     }
 }
