@@ -52,17 +52,17 @@ const appendData =(data) =>{
          compare.append(input,label,p)
           var price = document.createElement("p");
           price.innerText="₹" +el.price;
-          price.style.marginTop="-2px";
-          price.style.fontSize="25px";
+        //   price.style.marginTop="-2px";
+        //   price.style.fontSize="25px";
 
           var cut_price = document.createElement("s");
           cut_price.innerText ="₹" + el.strikeoff;
-          cut_price.style.fontSize="18px"
+        //   cut_price.style.fontSize="18px"
 
           var cutoff = document.createElement("div");
           cutoff.innerText = offoprice(el.price,el.strikeoff);
           cutoff.style.border=" 1px solid #1d1d1d";
-          cutoff.style.height = "25px";
+        //   cutoff.style.height = "25px";
 
           var heart = document.createElement("i");
           heart.setAttribute("class", "fa-regular fa-heart")
@@ -76,11 +76,11 @@ const appendData =(data) =>{
 
           var pid = document.createElement("p");
           pid.innerHTML = el.Product_Id;
-          pid.style.fontSize = "20px"
+        //   pid.style.fontSize = "20px"
 
           var title = document.createElement("p");
           title.innerText =  el.title;
-          title.style.fontSize = "30px"
+        //   title.style.fontSize = "30px"
 
 
           var time = document.createElement("p");
@@ -125,6 +125,7 @@ function buynow(el){
 
 var add=[];
 function addtocart(el){
+    el.quant =1 ;
     console.log(el);
     add.push(el)
     localStorage.setItem("added",JSON.stringify(add))

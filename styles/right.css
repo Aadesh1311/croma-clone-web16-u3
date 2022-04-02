@@ -109,11 +109,11 @@ hr{
     border-radius: 5px;
     /* border: 1px solid white; */
 }
-#bottompara{
+/* #bottompara{
     font-size:19.5px;
-}
+} */
 #bottompara span{
-    font-size: 25px;
+    font-size: 16px;
 }
 a{
     color:#205566 ;

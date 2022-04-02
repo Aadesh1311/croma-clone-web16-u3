@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="right.css">
+    <link rel="stylesheet" href="./styles/right.css">
+    <!-- Navbar Related code Starts -->
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- Navbar Related code ends -->
 
 </head>
 <body>
-
+    <!-- Navbar Starts-->
+    <div id="navbar"></div>
+    <!-- Navbar Ends -->
+  
     <div id="allData">
 
     
@@ -18,7 +29,7 @@
         <div id="categories"  >
          
             <div class="right">
-                <h3>SORT BY</h3>
+                <h6>SORT BY</h6>
                 <select class="searchbox">
                     <option value="FEATURED">FEATURED</option>
                     <option value="Latest Arrival">LASTEST ARRIVAL</option>
@@ -29,12 +40,12 @@
                 </select>
             </div>
             <div class="right">
-                <h3>FILTER BY</h3>
+                <h6>FILTER BY</h6>
                 <!-- to append the selected products .... -->
                 <p id="appendproducts"></p>
     
                 <hr >
-                <h3>CATEGORY</h3>
+                <h6>CATEGORY</h6>
                 <div class="sort by category">
                     <!-- search bar -->
                     <input type="text" placeholder="SEARCH" class="searchbox">
@@ -77,7 +88,7 @@
                </div>
     
                <!-- 2nd div PRICE-->
-               <h3>PRICE</h3>
+               <h6>PRICE</h6>
                <div class="sort by category">
                 <!-- search bar -->
                     <input type="text" placeholder="SEARCH" class="searchbox">
@@ -115,7 +126,7 @@
                    </div>
                   <!-- 2nd div end -->
                    <!-- 3rd div BRAND-->
-                    <h3>BRAND</h3>
+                    <h6>BRAND</h6>
                     <div class="sort by category">
                      <!-- search bar -->
                         <input type="text" placeholder="SEARCH" class="searchbox">
@@ -155,7 +166,7 @@
                     <!-- 3rd div end -->
     
                     <!-- 4th div -->
-                    <h3>DELIVERY MODES</h3>
+                    <h6>DELIVERY MODES</h6>
                     <div class="sort by category">
                     <!-- search bar -->
                         <input type="text" placeholder="SEARCH" class="searchbox">
@@ -177,7 +188,7 @@
                     <!-- 4th div end -->
       
                     <!-- 5th div -->
-                    <h3>COUNTRY OF MANUFACTURING</h3>
+                    <h6>COUNTRY OF MANUFACTURING</h6>
                   <div class="sort by category">
                      
                         <input type="checkbox"class="checkbox">
@@ -186,7 +197,7 @@
                   <!-- 5th div end -->
     
                   <!-- 6th div -->
-                  <h3>COUNTRY OF ORIGIN</h3>
+                  <h6>COUNTRY OF ORIGIN</h6>
                   <div class="sort by category">
                      
                         <input type="checkbox"class="checkbox">
@@ -198,7 +209,7 @@
                   <!-- 6th div end -->
                
                   <!-- 7th div -->
-                  <h3>PRODUCT TYPE</h3>
+                  <h6>PRODUCT TYPE</h6>
                  
                      
                     <input type="checkbox"class="checkbox">
@@ -211,23 +222,23 @@
                      <label for="Flip Case (1)">Flip Case (1)</label>
         
                   <!-- 7th div end -->
-                  <h3>IDEAL FOR</h3>
-                  <h3>LIFESTYLE</h3>  
-                  <h3>PRODUCT TYPE</h3>
-                  <h3>GENDER</h3>
-                  <h3>PROJECTOR FORMAT</h3>
-                  <h3>SUBWOOFER TYPE</h3>
-                  <h3>SUITABLE FOR</h3>
-                  <h3>COMPATIBILITY</h3>
-                  <h3>CARD TYPE</h3>
-                  <h3>DISCOUNT</h3>  
-                  <h3>CONNECTORS</h3>
-                  <h3>POWER SOURCE</h3>
-                  <h3>PROJECTOR FORMAT</h3>
-                  <h3>WEIGHT</h3>
-                  <h3>COLOUR FAMILY</h3>
-                  <h3>COMPATIBILITY</h3>
-                  <h3>STORE AVAILABILITY</h3>
+                  <h6>IDEAL FOR</h6>
+                  <h6>LIFESTYLE</h6>  
+                  <h6>PRODUCT TYPE</h6>
+                  <h6>GENDER</h6>
+                  <h6>PROJECTOR FORMAT</h6>
+                  <h6>SUBWOOFER TYPE</h6>
+                  <h6>SUITABLE FOR</h6>
+                  <h6>COMPATIBILITY</h6>
+                  <h6>CARD TYPE</h6>
+                  <h6>DISCOUNT</h6>  
+                  <h6>CONNECTORS</h6>
+                  <h6>POWER SOURCE</h6>
+                  <h6>PROJECTOR FORMAT</h6>
+                  <h6>WEIGHT</h6>
+                  <h6>COLOUR FAMILY</h6>
+                  <h6>COMPATIBILITY</h6>
+                  <h6>STORE AVAILABILITY</h6>
             </div>
         </div>
        
@@ -310,8 +321,49 @@
 
 </body>
 </html>
-<script src="right.js"></script>
-<script src="hardcode.js"></script>
+<script src="./JS/right.js"></script>
+<script src="./JS/hardcode.js"></script>
+<!-- Navbar Related code Starts -->
+<script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
+  <!-- Navbar Related code ends -->
 
 
 
