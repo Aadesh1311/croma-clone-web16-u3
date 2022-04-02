@@ -46,6 +46,6 @@ btn.classList.remove("rotate");
 cartChange();
 function cartChange() {
 var totalCost = JSON.parse(localStorage.getItem("total"));
-document.querySelector("#price").innerHTML = `₹${totalCost}`;
-document.querySelector("#totalCost").innerHTML = `₹${totalCost}`;
+document.querySelector("#price").innerHTML = `₹${totalCost}.00`;
+document.querySelector("#totalCost").innerHTML = `₹${totalCost}.00`;
 }

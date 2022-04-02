@@ -77,9 +77,9 @@ ul {
 
     border: 1px solid green;
 
-}
+} */
 
-#content {
+ #content {
     width: 200%;
     height: 40%;
     overflow-y: hidden;
@@ -109,7 +109,7 @@ ul {
 
     width: 3%;
     display: inline-block;
-}
+} 
 
 #leftArrow button,
 #rightArrow button {
@@ -157,19 +157,7 @@ ul {
     color: red;
 }
 
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
+
 
 
 .next {
@@ -194,7 +182,6 @@ ul {
 
 }
 
-/* content */
 #sp-outer-box {
     width: 1389px;
     height: 600px;
@@ -212,10 +199,7 @@ ul {
     margin-top: 10%;
     overflow-y: scroll;
     margin-left: 4.2%;
-    /* green; */
 
-    /* display: inline-block; */
-    /* vertical-align: top; */
     display: inline-block;
 }
 
@@ -229,14 +213,13 @@ ul {
     vertical-align: top;
 }
 
-/* right box css */
 #sp-product-name {
     font-size: 145%;
 line-height: 145%;
 font-weight: 700;
 margin: -1% 0% 1% -1%;
 padding: 1% 1%;
-}
+} 
 
 
 .sp-product-id {
@@ -333,7 +316,7 @@ vertical-align: middle;
     width: 70%;
     height: 23%;
     margin: 1% 2% 4% -11%;
-    /* 3; */
+
 }
 
 .sp-dashed {
@@ -433,8 +416,8 @@ label {
     margin-left: 8%;
     border-radius: 8px;
     border: 1px solid rgb(59, 53, 53);
-
-
+    background-color: black;
+    color: wheat;
 }
 
 .sp-add-to-cart:hover {
@@ -569,12 +552,12 @@ text-decoration: underline;
 color:#00e9bf;
 }
 
-  * {
+  /* * {
     font-family: "Gotham", sans-serif;
     color: #ffffff;
     transition: 0.5s;
 
-  }
+  } */
 
  
   .flex {
