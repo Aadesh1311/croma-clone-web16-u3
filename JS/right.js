@@ -28,7 +28,8 @@ const appendData =(data) =>{
       data.map(function(el){
           var div =  document.createElement("div");
           var hr = document.createElement("hr");
-          var hr2 = document.createElement("hr");
+          hr.style.borderColor="#1d1d1d"
+        //  var hr2 = document.createElement("hr");
 
           var sdiv =  document.createElement("div");
           var pdiv =  document.createElement("div");
