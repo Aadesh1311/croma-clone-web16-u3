@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Croma Electronics | Online Electronics Shopping | Buy...</title>
     <link rel="icon" href="https://www.croma.com/assets/croma-icon-192.png" />
-    <link rel="stylesheet" href="/prodD.css">
-    <style>
-        
-     
-    </style>
+    <link rel="stylesheet" href="/styles/prodD.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
 </head>
 
 <body>
-
+ <!-- Navbar Starts-->
+ <div id="navbar"></div>
+ <!-- Navbar Ends -->
 
     <!--end of header-->
     <div id="sp-outer-box">
@@ -167,5 +172,44 @@
 </body>
 
 </html>
-<script src="/comp.js"></script>
-<script src="/productD.js"></script>
+
+<script src="/JS/productD.js"></script>
+<script type="module">
+    //
+    import navbarImp from "./components/navbar.js";
+    //console.log("navbarImp:", navbarImp());
+  
+    let navID = document.getElementById("navbar");
+    navID.innerHTML = navbarImp();
+  
+    document
+      .getElementById("nav-top-search")
+      .addEventListener("keypress", (elem) => {
+        if (elem.code == "Enter") {
+          //console.log(elem);
+  
+          let inputVal = document.getElementById("nav-top-search").value;
+          console.log("inputVal:", inputVal);
+  
+          if (
+            inputVal == "mobile" ||
+            inputVal == "MOBILE" ||
+            inputVal == "Mobile" ||
+            inputVal == "mobiles" ||
+            inputVal == "MOBILES" ||
+            inputVal == "Mobiles"
+          ) {
+            console.log("passed if condition:", inputVal);
+          }
+  
+          //window.location = "";
+        }
+      });
+  
+    //
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  

@@ -98,7 +98,7 @@ function nav() {
         </div>
         <!-- . -->
         <div id="nav-cart">
-          <a href="">
+          <a href="/cart.html">
             <img src="./images/outline_shopping_cart_white_24dp.png" />
           </a>
         </div>
