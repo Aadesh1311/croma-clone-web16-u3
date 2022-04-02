@@ -92,7 +92,7 @@ function nav() {
         </div>
         <!-- . -->
         <div id="nav-login">
-          <a href=""
+          <a href="/login.html"
             ><img src="./images/outline_person_white_24dp.png" alt="profile"
           /></a>
         </div>
