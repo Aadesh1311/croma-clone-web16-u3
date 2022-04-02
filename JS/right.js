@@ -83,7 +83,9 @@ const appendData =(data) =>{
           var title = document.createElement("p");
           title.innerText =  el.title;
           //title.style.fontSize = "30px"
-
+          title.addEventListener("click",function(){
+            window.location.href = "productD.html"
+          })
 
           var time = document.createElement("p");
           time.innerText = el.delivery;

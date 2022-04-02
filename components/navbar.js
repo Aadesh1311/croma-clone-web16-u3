@@ -123,7 +123,7 @@ function nav() {
   
         <!-- . -->
         <div class="carousel-cell">
-          <a href="">
+          <a href="./croma Tv/television.html">
             <img
               class="w3-image"
               src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891064/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Televisions_ikvrve.svg/mxw_64,f_auto"
@@ -145,7 +145,7 @@ function nav() {
   
         <!-- . -->
         <div class="carousel-cell">
-          <a href="">
+          <a href="./right.html">
             <img
               class="w3-image"
               src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891060/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Audio_dpxz8t.svg/mxw_64,f_auto"
