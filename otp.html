@@ -17,10 +17,136 @@
             background-color: #121212;
             border-radius: 8px;
         }
+        #verify{
+          width:70%;
+          height: 40px;
+          margin:0px 0px 0px 0px;
+        }
+        #verifyotp{
+          font-size: 20px;
+          margin: 13px 0px -2px 163px;
+          color:white;
+        }
+        #cross{
+            width:25px;
+            height:33px;
+           margin: 0px 0px 0px 486px;
+           }
+        .cross{
+            color: white;
+            font-size: 35px;
+            padding:0px 0px 0px 0px;
+        }
+        #sent{
+          width:70%;
+          height: 40px;
+          margin:0px 0px 0px 0px;
+          
+        }
+        #senttext{
+          font-size: 16px;
+          margin: 10px 0px -2px 163px;
+          color:#979090;
+
+        }
+        #inputotp{ 
+          display:flex;
+          width:70%;
+          height: 60px;
+          margin:11px 0px 0px 83px;
+          
+        }
+        .inputotp{
+          width: 50px;
+          height: 50px;
+          
+         }
+         .otp{
+           width:45px;
+           height: 50px;
+           border-radius: 5px;
+           border:1px solid #c7c4c4;
+           background-color: #121212;
+           color: white;
+           font-size: 20px;
+           text-align: center;
+         }
+         #didnot{
+           width: 70%;
+           height: 40px;
+           margin: 45px 0px 0px 118px;
+
+         }
+         .didnot{
+           color:white;
+           font-size: 14px;
+           font-weight: bold;
+           margin: 0px 0px 0px 13px;
+         }
+         #resend{
+          color: #00e9bf !important;
+          text-decoration: underline;
+         }
+         #submit{
+            width: 70%;
+            height: 46px;
+            padding: 0px 0px 0px 0px;
+            margin: 3px 0px 0px 80px;
+            border-radius: 5px;
+            border: none;
+            
+        }
+        #submitbtn{
+            width:100%;
+            height: 46px;
+            margin:0px 0px 0px 0px;
+            border-radius: 5px;
+            outline: none;
+            background-color: #00e9bf;
+            border:1px solid #00e9bf;
+            font-size: 15px;
+        }
       </style>  
         </head>
         <body>
             <div id="otppage">
+              <div id="cross">
+                <p class="cross">&#x000D7;</p>
+              </div>
+              <div id="verify">
+                <p id="verifyotp">
+                  VERIFY WITH OTP
+                </p>
+              </div>
+              <div id="sent">
+                <p id="senttext">
+                  sent to 9264907558
+                </p>
+              </div>
+              <div id="inputotp">
+                <div class="inputotp" style="margin-left:39px;">
+                  <input class="otp" type="text" maxlength="1"/>
+                </div>
+                <div class="inputotp" style="margin-left:14px;">
+                  <input class="otp" type="text" maxlength="1"/>
+                </div>
+                <div class="inputotp" style="margin-left:14px;">
+                  <input class="otp" type="text" maxlength="1"/>
+                </div>
+                <div class="inputotp" style="margin-left:18px;">
+                  <input class="otp" type="text" maxlength="1"/>
+                </div>
+              </div>
+              <div id="didnot">
+                <p class="didnot">Didn't Recieve Your OTP?<a id="resend">Resend it</a></p>
+              </div>
+              <div id="submit">
+                <button id="submitbtn" onclick="()">
+                   Submit OTP
+               </button>
+
+            </div>
+
                 
             </div>
 
