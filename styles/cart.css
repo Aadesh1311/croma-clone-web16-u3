@@ -1,5 +1,6 @@
 
 .removeItem{
+  width :100px;
     padding: 4px 16px;
     position: absolute;
     border: 1px solid #cfc3c5;
@@ -38,8 +39,6 @@
     margin: auto;
   }
   section {
-    
-
     margin: auto;
     align-items: center;
     
@@ -62,13 +61,16 @@
     margin-bottom: 1rem;
     margin: 2px 2px 0px -1px;
 }
-h3 {
+#h3 {
+  
     font-size: 20px;
-    margin: 22px 18px 22px 9px;
-    line-height: 2px;
-    font-weight: 400;
+    margin: -4px 1px 10px -18px;
+    line-height: 0px;
+  font-weight: 600;
+
   }
   section > button {
+    width:32px;
     margin: 4px 5px;
     display: block;
   }
@@ -177,7 +179,7 @@ h3 {
   display: grid;
   width: 400px;
   height: 211px;
-  margin: 0px 0px 20px 126px;
+  margin: 0px 0px 0px 126px;
   border-radius: 8px!important;
 }
 #image-del{
@@ -267,7 +269,7 @@ width: 100%;
 }
 
 #apply{
- margin: 300px 0px -298px 229px;
+ margin: 200px 0px -298px 229px;
  border: 1px solid #353535;
  width: 50%;
  border-radius: 8%;

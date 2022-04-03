@@ -130,7 +130,7 @@ function buynow(el){
 
 var add=[];
 function addtocart(el){
-    el.quant =1 ;
+    el.quant = 1 ;
     console.log(el);
     add.push(el)
     localStorage.setItem("added",JSON.stringify(add))

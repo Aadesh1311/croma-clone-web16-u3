@@ -1,12 +1,15 @@
-// var cart = JSON.parse(localStorage.getItem("cartItem")) || [];
-// console.log(cart);
-var dataMobile = JSON.parse(localStorage.getItem("added"));
-console.log(dataMobile);
-function displayData(dataMobile) {
-  document.querySelector("#container").innerHTML=null
-  document.querySelector("#containerCont").innerHTML=null
 
-  dataMobile.map(function (elem, index) {
+var dataLights = JSON.parse(localStorage.getItem("added"));
+console.log(dataLights);
+
+
+displayData(dataLights);
+function displayData(dataLights) {
+  document.querySelector("#container").innerHTML=null
+    document.querySelector("#containerCont").innerHTML=null
+
+  
+  dataLights.map(function (elem, index) {
     var div = document.createElement("div");
     
     var section = document.createElement("section");
@@ -24,12 +27,12 @@ function displayData(dataMobile) {
     price.innerText = "₹"+  elem.price;
 
     var quant = document.createElement("h3");
-    quant.innerText = "Quantity:-" + "1";
-
+    quant.innerText = "Quantity:" + elem.quant;
+    quant.setAttribute("id","h3")
 
     var btn2 = document.createElement("button");
     btn2.innerText = "-";
-    
+   
     var btn = document.createElement("button");
     btn.innerText = "+";
 
@@ -40,92 +43,64 @@ function displayData(dataMobile) {
     btn.addEventListener("click", function () {
       increaseQuant(index);
     });
-    var remove= document.createElement("button")
+
+        var remove= document.createElement("button")
     remove.setAttribute("class","removeItem")
     remove.innerHTML = "Remove";
     remove.addEventListener("click", function () {
+     
        add(index)
     })
 
-    
-    section.append(name, price, btn, quant,btn2,remove);
+
+
+    section.append(name,price,quant,btn,btn2,remove);
     document.querySelector("#containerCont").append(section);
     
     div.append(avtar);
     document.querySelector("#container").append(div);
   });
 }
-displayData(dataMobile);
-// remove cartItems start
-function add(index){
-  // container.innerHTML = null
-  document.querySelector("#container").innerHTML=null
-
-  dataMobile.splice(index,1)
-  showTotal()
-  displayData(dataMobile)
-  localStorage.setItem("cartArr",JSON.stringify(cart))
-  
-}
-// remove cartItems ends
-
-
 
 function showTotal() {
-  var total = dataMobile.reduce(function (acc, elem) {
+  var total = dataLights.reduce(function (acc, elem) {
     return (acc += elem.price * elem.quant);
   }, 0);
   document.getElementById("total").textContent = "₹" + total;
   // document.getElementById("discount").textContent = `Total amount to pay ₹ ${total}`
   localStorage.setItem("total", JSON.stringify(total));
 }
+
 showTotal();
-document.querySelector("#promo").addEventListener("click", formSubmit);
-function formSubmit() {
-  var coupon = document.querySelector("#coupon").value;
 
-  if (coupon == "masai30") {
-    //  alert("succ")
-    var total = dataMobile.reduce(function (acc, elem) {
-      var tot = elem.price * elem.quant;
-      var dis = elem.price * elem.quant * (30 / 100);
-      return (acc += tot - dis);
-    }, 0);
-    document.querySelector("#total").innerText =
-      "Your Total:" + " :-" + " " + total;
-
-    var dis = dataMobile.reduce(function (acc, elem) {
-      return (acc += elem.price * elem.quant * (30 / 100));
-    }, 0);
-
-    document.querySelector("#discount").innerText =
-      "Discounts Rs." + " :-" + dis;
-
-    alert("Your coupan is applied");
-  } 
-  else {
-    alert(" Coupan NOT applied");
-  }
-}
 function decreaseQuant(index) {
   // console.log(index);
-  dataMobile[index].quant--;
-  console.log(dataMobile);
-  localStorage.setItem("cartItems", JSON.stringify(dataMobile));
-  displayData(dataMobile); // this will show data when we move from men to cart//
+  document.querySelector("#container").innerHTML=null
+  dataLights[index].quant--;
+  console.log(dataLights);
+  localStorage.setItem("cartItems", JSON.stringify(dataLights));
+  displayData(dataLights); // this will show data when we move from men to cart//
   showTotal();
 }
 
 function increaseQuant(index) {
   // console.log(index);
-  dataMobile[index].quant++;
-  console.log(dataMobile);
-  localStorage.setItem("cartItems", JSON.stringify(dataMobile));
-  displayData(dataMobile); // this will show data when we move from men to cart//
+  document.querySelector("#container").innerHTML=null
+  dataLights[index].quant++;
+  console.log(dataLights);
+  localStorage.setItem("cartItems", JSON.stringify(dataLights));
+  displayData(dataLights); // this will show data when we move from men to cart//
   showTotal();
 }
+function add(index){
+  // container.innerHTML = null
+  document.querySelector("#container").innerHTML=null
+  dataLights.splice(index,1)
+  showTotal()
+  displayData(dataLights)
+  localStorage.setItem("cartArr",JSON.stringify(cart))
+  
+}
 function redirect(){
-  // showTotal();
-  // localStorage.setItem("total",JSON.stringify(total));
   window.location.href = "checkout.html"
 }
