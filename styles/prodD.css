@@ -398,19 +398,22 @@ label {
     height: 45%;
     margin: 4% 12%;
     padding: 1%;
+    cursor: pointer;
 }
 
 .sp-add-to-cart {
+    cursor: pointer;
     width: 45%;
     height: 15%;
     border-radius: 8px;
     background-color: aqua;
     border: 1px solid rgb(59, 53, 53);
-
-
+    
+    
 }
 
 .sp-buy-now {
+    cursor: pointer;
     width: 40%;
     height: 15%;
     margin-left: 8%;

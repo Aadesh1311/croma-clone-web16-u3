@@ -82,7 +82,7 @@ const appendData =(data) =>{
 
           var title = document.createElement("p");
           title.innerText =  el.title;
-          //title.style.fontSize = "30px"
+          title.setAttribute("id", "ProductT")
           title.addEventListener("click",function(){
           myFun(el)
           })
