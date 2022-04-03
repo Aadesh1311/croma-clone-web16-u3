@@ -9,6 +9,3 @@ https://abhinavbisht94.github.io/croma-clone-web16-u3/
 
 Netlify:
 https://croma-construct-w2-ftweb16.netlify.app/
-
-Video:
-https://drive.google.com/file/d/1k06gbeRHIEggvqrvtfVL97hPpkz8niSG/view?usp=sharing
